@@ -12,6 +12,6 @@ public class MiaClasse extends Thread
         int i = 0;
         
         for(i = 0; i < 7; i++)
-            System.out.println(i + 1 + " " + "Nome Thread: " +getName());
+            System.out.println(i + 1 + " " + "Nome Thread: " + getName());
     }
 }
