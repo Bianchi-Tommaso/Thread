@@ -10,7 +10,6 @@ public class Operazioni4 extends Thread
     Buffer dati;
     
     private double c;
-    private double a = 10;
     
     public Operazioni4(Buffer d)
     {
@@ -20,7 +19,7 @@ public class Operazioni4 extends Thread
     
     public void run()
     {
-        dati.t = (dati.z - (a * c));
+        dati.t = (dati.z - (10 * c));
         System.out.println("Calcolo Finale t: " + dati.t);
     }
 }

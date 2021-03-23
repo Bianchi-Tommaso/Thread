@@ -8,9 +8,7 @@ package CalcoloParallelo;
 public class Operazioni1 extends Thread
 {
     Buffer dati;
-    
-    private double b = 4;
-    private double c = 2;
+
     private double a;
     
     public Operazioni1(Buffer d)
@@ -21,7 +19,7 @@ public class Operazioni1 extends Thread
     
     public void run()
     {
-        dati.x = ((a * c) + b);
+        dati.x = ((a * 2) + 4);
         System.out.println("Ho Calcolato x: " + dati.x);
     }
 }

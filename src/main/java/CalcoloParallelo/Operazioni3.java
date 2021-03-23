@@ -9,9 +9,8 @@ public class Operazioni3 extends Thread
 {
     Buffer dati;
     
-    private double a = 5;
-    private double b = 0;
-    private double c = 0;
+    private double b;
+    private double c;
     
     public Operazioni3(Buffer d)
     {
@@ -22,7 +21,7 @@ public class Operazioni3 extends Thread
     
     public void run()
     {
-        dati.z = (c * b * a);
+        dati.z = (c * b * 5);
         System.out.println("Ho Calcolato z: " + dati.z);
     }
 }

@@ -10,8 +10,7 @@ public class Operazioni2 extends Thread
     Buffer dati;
     
     private double b;
-    private double c = 7;
-    private double a = 3;
+
     
     public Operazioni2(Buffer d)
     {
@@ -21,7 +20,7 @@ public class Operazioni2 extends Thread
     
     public void run()
     {
-        dati.y = ((c * b) + a);
+        dati.y = ((7 * b) + 3);
         System.out.println("Ho Calcolato y: " + dati.y);
     }
 }
