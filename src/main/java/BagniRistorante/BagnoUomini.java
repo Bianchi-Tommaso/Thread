@@ -1,14 +1,26 @@
 package BagniRistorante;
 
-public class BagnoUomini extends Bagno
+public class BagnoUomini
 {  
+    private String TipoBagn;
+
     public BagnoUomini(String TipoBagn) 
     {
-        super(TipoBagn);
+        this.TipoBagn = TipoBagn;
     }
-
-    public String getTipoBagn()
+ 
+    public String getTipoBagn() 
     {
         return TipoBagn;
+    }
+
+    public void setTipoBagn(String TipoBagn) 
+    {
+        this.TipoBagn = TipoBagn;
+    }
+    
+    public void Stampa()
+    {        
+        System.out.println("Il Bagno E' Occupato Da: " + Thread.currentThread().getName() + " In " + this.getTipoBagn());
     }
 }

@@ -2,39 +2,35 @@ package BagniRistorante;
 
 public class ProgBagni
 {
+    public static int RUN = 0;
+    
     public static void main(String[] args) throws InterruptedException
     {
-        Thread t = new Thread();
-        Uomo  u1 = new Uomo("Antonio");
-        Uomo  u2 = new Uomo("Tommaso");
-        Uomo  u3 = new Uomo("Lorenzo");
-        Uomo  u4 = new Uomo("Ryan");
-        Donna d1 = new Donna("Maria");
-        Donna d2 = new Donna("Giulia");
-        Donna d3 = new Donna("Melissa");
-        Donna d4 = new Donna("Priscilla");
+        Thread p1 = new Persona("Antonio", "M");
+        Thread p2 = new Persona("Tommaso", "M");
+        Thread p3 = new Persona("Lorenzo", "M");
+        Thread p4 = new Persona("Ryan", "M");
+        Thread p5 = new Persona("Maria", "F");
+        Thread p6 = new Persona("Priscilla", "F");
+        Thread p7 = new Persona("Melissa", "F");
+        Thread p8 = new Persona("Giulia", "F");
         BagnoUomini bu = new BagnoUomini("Bagno Uomini");
         BagnoDonne  bd = new BagnoDonne("Bagno Donne");
         
-        u1.start();
-        u2.start();
-        u3.start();
-        u4.start();
-        d1.start();
-        d2.start();
-        d3.start();
-        d4.start();
+        p1.start();
+        p2.start();
+        p3.start();
+        p4.start();
+        p5.start();
+        p6.start();
+        p7.start();
+        p8.start();
+       
+        RUN = 1;
         
-        t.wait(5000);
         
-        u1.stop();
-        u2.stop();
-        u3.stop();
-        u4.stop();
-        d1.stop();
-        d2.stop();
-        d3.stop();
-        d4.stop();
-        System.out.println("Stop");
+        Thread.sleep(5000);
+        
+        RUN = 0;
     } 
 }
