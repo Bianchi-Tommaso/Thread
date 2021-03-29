@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package CalcoloParallelo;
 
 /**
@@ -26,8 +21,8 @@ public class CalcoloParalleloEs
        Operazioni3 th3 = new Operazioni3(parziali);  //(moltiplico i risultati di Operazioni1 e Operazioni2 e anche * 5)
        Operazioni4 th4 = new Operazioni4(parziali);  //(operazioni3 -10c)
        
-       th1.start();
-       th2.start();
+       th1.start(); //(2a + 4)
+       th2.start(); //(7b + 3);
        try
        {
            th1.join();
