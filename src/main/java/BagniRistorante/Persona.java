@@ -1,49 +1,31 @@
 package BagniRistorante;
 
-public class Persona extends Thread
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class Persona implements Runnable
 {
     private String nome;
-    private String sesso;
+    private Bagno bagno;
 
-    public Persona(String nome, String sesso) 
+    public Persona(Bagno bagno, String sesso) 
     {
         this.nome = nome;
-        this.sesso = sesso;
+        this.bagno = bagno;
     }
-
-    public String getNome()
+   
+    public void run() 
     {
-        return nome;
-    }
-
-    public String getSesso() 
-    {
-        return sesso;
-    }
-    
-    public void run()
-    {
-        
-        BagnoDonne bd = new BagnoDonne("");
-        BagnoUomini bu = new BagnoUomini("");
-        
         while(ProgBagni.RUN == 1)
         {
-            if(this.sesso == "F")
+            try 
             {
-                synchronized(bd)
-                {
-                    bd.Stampa();
-                }
-            }
-        
-            if(this.sesso == "M")
+                bagno.Utilizza();
+            } 
+            catch (InterruptedException ex) 
             {
-                synchronized(bu)
-                {
-                    bu.Stampa();
-                }
+                Logger.getLogger(Persona.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }
+        }   
     }
 }
