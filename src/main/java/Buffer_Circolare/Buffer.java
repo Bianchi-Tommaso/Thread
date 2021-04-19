@@ -15,12 +15,12 @@ public class Buffer
          elementi.add(x);
      }
      
-     synchronized public int LeggiDatiAlBuffer(int i)            //Metodo che il Consumatore accede per leggere un dato 
+     public int LeggiDatiAlBuffer(int i)            //Metodo che il Consumatore accede per leggere un dato 
      {
-         elementi.get(i);
+         int x = elementi.get(i);
          elementi.remove(i);
          
-         return i;
+         return x;
      }
      
      public boolean isEmpty()                       //Metodo per verificare se il buffer è vuoto

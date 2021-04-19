@@ -19,7 +19,7 @@ public class ProgCircolare
         consumatore2.start();
         consumatore3.start();
         
-        Thread.sleep(5000); //Tempo di Attesa prima di fermare ogni Thread
+        Thread.sleep(30000); //Tempo di Attesa prima di fermare ogni Thread
         STOP = false;        //Variabile che controlla i While dei Thread
         System.out.println("Termine Main");   
     } 
