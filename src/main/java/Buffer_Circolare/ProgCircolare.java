@@ -12,6 +12,7 @@ public class ProgCircolare
         
         Produttore produttore = new Produttore();
         Produttore produttore1 = new Produttore();
+        
         Consumatore consumatore1 = new Consumatore();
         Consumatore consumatore2 = new Consumatore();
         Consumatore consumatore3 = new Consumatore();
@@ -29,8 +30,16 @@ public class ProgCircolare
         consumatore2.start();
         consumatore3.start();
         
-        Thread.sleep(30000); //Tempo di Attesa prima di fermare ogni Thread
-        STOP = false;        //Variabile che controlla i While dei Thread
+        
+               
+        produttore1.join();
+        produttore.join();
+        STOP = false;      //Variabile che controlla i While dei Thread
+        
+        consumatore1.stop();
+        consumatore2.stop();
+        consumatore3.stop();
+        
         System.out.println("Termine Main");   
     } 
 }

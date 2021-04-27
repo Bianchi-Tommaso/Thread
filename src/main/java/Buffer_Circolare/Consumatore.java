@@ -9,7 +9,6 @@ public class Consumatore extends Thread
     public void run()
     {      
         int i = 0;
-             //oggetto che serve per interagire con la classe buffer
         
         while(ProgCircolare.STOP)       //Questa condizione serve per interrompere il ciclo e terminare il Thread
         {

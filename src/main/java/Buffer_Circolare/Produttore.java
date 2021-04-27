@@ -14,9 +14,9 @@ public class Produttore extends Thread
         int i = 0;
         Random rand = new Random();         //serve per generare dei numeri all'interno del buffer
         
-        while(ProgCircolare.STOP)           //Questa condizione serve per interrompere il ciclo e terminare il Thread
-        {
-                       //Qui controllo se è vuoto il Buffer per riempirlo solo quando è vuoto
+                   //Questa condizione serve per interrompere il ciclo e terminare il Thread
+        
+                       
                 for(i = 0; i < datiGenerati; i++)
                 {                            
                     n = rand.nextInt(50);                                           //genera un numero
@@ -37,6 +37,6 @@ public class Produttore extends Thread
             {
                 Logger.getLogger(Produttore.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }
+        
     }
 }
