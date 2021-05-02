@@ -34,7 +34,7 @@ public class ProgCircolare
                
         produttore1.join();
         produttore.join();
-        STOP = false;      //Variabile che controlla i While dei Thread
+        STOP = false;      //Variabile 
         
         consumatore1.stop();
         consumatore2.stop();
