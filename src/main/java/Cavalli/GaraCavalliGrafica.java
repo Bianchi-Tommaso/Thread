@@ -10,16 +10,11 @@ import java.awt.Image;
 import java.util.Locale;
 import javax.swing.*;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * 
+ * <p> Questa Classe rappresenta il Frame principale dove verrà viusalizzato il campo e i cavalli. </p> 
  */
 
-/**
- *
- * @author informatica
- */
 public class GaraCavalliGrafica extends JFrame
 {
     int posizione;
@@ -58,6 +53,10 @@ public class GaraCavalliGrafica extends JFrame
         return posizione++;
     }
     
+    /**
+     * <p> Questo metodo controlla l'arrivo di un cavallo all'interno della corsa </p>
+     */
+    
     public synchronized void ControllaArrivi()
     {
         boolean arrivati = true;
@@ -75,6 +74,10 @@ public class GaraCavalliGrafica extends JFrame
             VisualizzaClassifica();
         }
     }
+
+    /**
+     * <p> QUesto metodo riporta la classifica della Gara </p>
+     */
     
     public void VisualizzaClassifica()
     {

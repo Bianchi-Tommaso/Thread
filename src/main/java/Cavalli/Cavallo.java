@@ -5,16 +5,12 @@ import java.awt.MediaTracker;
 import java.awt.Toolkit;
 import javax.swing.*;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * 
+ * <p> Questa Classe ha il Compito di rappresentare il singolo Cavallo. Ovvero all'interno del costruttore vengono eseguite delle istruzioni che impostano alla linea di partenza i cavalli </p>
+ * <p> Inoltre gli viene assegnata un immagine per poter vedere l'avanzamento di ogni cavallo. Infine viene richiamato il metodo paint che tramite l'immagine e le cordinate verrà visualizzato nel Frame </p>
  */
 
-/**
- *
- * @author informatica
- */
 class Cavallo extends JFrame
 {
     int cordx;
@@ -30,12 +26,12 @@ class Cavallo extends JFrame
         
         switch(xx)
         {
-            case 1:{img = tk.getImage("cavallo1.jpg"); break;}
-            case 2:{img = tk.getImage("cavallo2.jpg"); break;}
-            case 3:{img = tk.getImage("cavallo3.jpg"); break;}
-            case 4:{img = tk.getImage("cavallo4.jpg"); break;}
-            case 5:{img = tk.getImage("cavallo5.jpg"); break;}
-            case 6:{img = tk.getImage("cavallo6.jpg"); break;}
+            case 1:{img = tk.getImage("c.jpeg"); break;}
+            case 2:{img = tk.getImage("c.jpeg"); break;}
+            case 3:{img = tk.getImage("c.jpeg"); break;}
+            case 4:{img = tk.getImage("c.jpeg"); break;}
+            case 5:{img = tk.getImage("c.jpeg"); break;}
+            case 6:{img = tk.getImage("c.jpeg"); break;}
         }
         
         MediaTracker mt = new MediaTracker(this);

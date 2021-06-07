@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Cavalli;
 
 import java.awt.Color;
@@ -10,11 +5,16 @@ import java.awt.Graphics;
 import javax.swing.JPanel;
 
 /**
- *
- * @author HP
+ * 
+ * <p> Il Compito di questa classe è di richiamare un metodo della classe Canvas (paint) dove verrà disegnato il campo </p>
  */
 class Campo extends JPanel
 {
+    /**
+     * 
+     * <p> All'interno del metodo passiamo un oggetto di tipo Graphics che tramite quel parametro possiamo richiamare metodi come il setColor(Disegna il frame con un tipo di colore)
+     * fillRect(Disegna un rettangolo)</p>
+     */
     public void paint(Graphics g)
     {
         g.setColor(Color.green);

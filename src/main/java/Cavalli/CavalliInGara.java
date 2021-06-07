@@ -1,15 +1,12 @@
 package Cavalli;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * 
+ * <p> Questa classe rappresenta i nostri Thread che gareggiano, quindi saranno i nostri cavalli in gara </p> 
+ * <p> Abbiamo il metodo Run() che una volta lanciato il Thread verrà eseguito, il suo compito è quello di far avanzare i cavalli. </p> 
+ * <p> Quindi nel nostro Frame vedremo l'immagine dei cavalli avanzare fino al traguardo, e infine visualizzare la classifica </p> 
  */
 
-/**
- *
- * @author informatica
- */
 public class CavalliInGara implements Runnable
 {
     Cavallo cavallo;
