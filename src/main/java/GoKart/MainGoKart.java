@@ -7,51 +7,38 @@ public class MainGoKart
         public static Semaforo spogliatoio = new Semaforo(2);
         public static Semaforo circuito = new Semaforo(4);
         public static ArrayList<Classifica> classifica = new ArrayList<Classifica>();
+        public static ArrayList<Pilota> piloti = new ArrayList<Pilota>();
+        public static ArrayList<String> nomi = new ArrayList<String>();
+        
+        
         
     public static void main(String[] args) throws InterruptedException
     {
+        final int MAX_Piloti = 8;
         
+       for(int i = 0; i < MAX_Piloti; i++)
+       {
+           
+           
         //Creo gli 8 Piloti
-        Pilota p1 = new Pilota();
-        Pilota p2 = new Pilota();
-        Pilota p3 = new Pilota();
-        Pilota p4 = new Pilota();
-        Pilota p5 = new Pilota();
-        Pilota p6 = new Pilota();
-        Pilota p7 = new Pilota();
-        Pilota p8 = new Pilota();
-        
+           piloti.add(new Pilota());
+
+       
         //Imposto i Nomi Ai Piloti
-        p1.setName("Pilota 1");
-        p2.setName("Pilota 2");
-        p3.setName("Pilota 3");
-        p4.setName("Pilota 4");
-        p5.setName("Pilota 5");
-        p6.setName("Pilota 6");
-        p7.setName("Pilota 7");
-        p8.setName("Pilota 8");
-        
+        piloti.get(i).setName("Pilota " + (i + 1));
+
+       
         //Lancio I Piloti(Thread)
-        p1.start();
-        p2.start();
-        p3.start();
-        p4.start();
-        p5.start();
-        p6.start();
-        p7.start();
-        p8.start();
-        
+        piloti.get(i).start();
+
+        }
+     
         //Qui il Main aspetta che ogni pilota la sua Gara per stampare la classifica
-        p1.join();
-        p2.join();
-        p3.join();
-        p4.join();
-        p5.join();
-        p6.join();
-        p7.join();
-        p8.join();
+        for(int i = 0; i < MAX_Piloti; i++)
+        piloti.get(i).join();
         
         
+           
        //Stampa della classifica generale.
        
         System.out.println("La Classiffica Finale In Base Al Tempo E' La Seguente:");
