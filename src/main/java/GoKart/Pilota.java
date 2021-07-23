@@ -5,12 +5,21 @@ import java.util.logging.Logger;
 
 public class Pilota extends Thread
 {
-    public static int contatoreGiri = 15;       //Variabile per tenere il giro
+    private int local_contatoreGiri;            //attributo per contare il giro
+    private String nomePilota;                  //attributo per impostare il nome del pilota
      boolean indumenti = false;                 //Variabile di controllo per verificare se un Pilota ha gli indumenti da pista
      boolean fineThread = true;                 //Varibile per far finire un Thread quando un pilota esce dalla pista e si cambia
      
-    public Pilota()
+    public Pilota(String nomePilota, int contatoreGiri)
     { 
+        this.nomePilota = nomePilota;
+        this.local_contatoreGiri = contatoreGiri;
+    }
+    
+    public Pilota(int contatoreGiri)
+    { 
+        nomePilota = "Default-Name";
+        this.local_contatoreGiri = contatoreGiri;
     }
 
     public boolean isIndumenti()
@@ -23,6 +32,16 @@ public class Pilota extends Thread
         this.indumenti = indumenti;
     }
     
+    public void setNomePilota(String nomePilota) 
+    {
+        this.nomePilota = nomePilota;
+    }
+
+    public String getNomePilota() 
+    {
+        return nomePilota;
+    }
+    
     public void run()
     {
         
@@ -30,7 +49,7 @@ public class Pilota extends Thread
         {
             //Oggetti spogliatoi e Circuito dove vengono passati i semafori dichiarati nel Main.
         Spogliatoio s = new Spogliatoio(MainGoKart.spogliatoio);        
-        Circuito c = new Circuito(MainGoKart.circuito);
+        Circuito c = new Circuito(MainGoKart.circuito, this.local_contatoreGiri);
         
             try 
             {
@@ -45,7 +64,7 @@ public class Pilota extends Thread
             {
                 try 
                 {
-                    fineThread = c.EntrataPista();      //Il Pilota entra in pista e quando ha percorso i 14 giri, il metodo ritorna il valore FALSE per fermare il Thread
+                    fineThread = c.EntrataPista();                          //Il Pilota entra in pista e quando ha percorso i 14 giri, il metodo ritorna il valore FALSE per fermare il Thread
                     this.indumenti = s.EntrataSpogliatoio(this.indumenti);  //Qui Si tolgono gli indumenti del Pilota
                 } 
                 catch (InterruptedException ex)

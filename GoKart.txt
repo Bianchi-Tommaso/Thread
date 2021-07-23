@@ -1,0 +1,8 @@
+1) pista
+1.1) tratti
+1.1.1) caratteristiche: 
+ - tipologia (curva, rettilineo)
+ - se curva gradi, raggio, direzione
+ - lunghezza
+
+
